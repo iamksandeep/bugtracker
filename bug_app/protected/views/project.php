@@ -7,7 +7,7 @@
 <div class="form">
 
 <?php $form=$this->beginWidget('CActiveForm', array(
-	'id'=>'project-project-form',
+	'id'=>'project-Project-form',
 	'enableAjaxValidation'=>false,
 )); ?>
 
