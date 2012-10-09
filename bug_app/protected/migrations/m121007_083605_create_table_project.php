@@ -7,11 +7,11 @@ class m121007_083605_create_table_project extends CDbMigration
 		 $this->createTable('project', array(
 		    'id' => 'pk',
 		    'name' => 'string NOT NULL',
-		    'description' =>'TEXT',
-		    'create_time' =>'DATETIME',
-		    'create_user_id' =>'INTEGER',
-		    'update_time' =>'DATETIME',
-		    'update_user_id' =>'INTEGER',
+		    'description' => 'TEXT',
+		    'create_time' => 'DATETIME',
+		    'create_user_id' => 'INTEGER',
+		    'update_time' => 'DATETIME',
+		    'update_user_id' => 'INTEGER',
         ),'ENGINE=InnoDB');
 	
 	}

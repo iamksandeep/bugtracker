@@ -852,3 +852,489 @@ Stack trace:
 REQUEST_URI=/bugtracker/bug_app/index.php?r=issue/admin
 HTTP_REFERER=http://localhost/bugtracker/bug_app/index.php?r=issue/index
 ---
+2012/10/09 07:16:12 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\wamp\www\bugtracker\framework\web\CController.php:337
+Stack trace:
+#0 C:\wamp\www\bugtracker\framework\web\CController.php(310): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\wamp\www\bugtracker\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 C:\wamp\www\bugtracker\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#3 C:\wamp\www\bugtracker\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#4 C:\wamp\www\bugtracker\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\wamp\www\bugtracker\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\wamp\www\bugtracker\framework\web\CController.php(292): CFilterChain->run()
+#7 C:\wamp\www\bugtracker\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\wamp\www\bugtracker\framework\web\CWebApplication.php(283): CController->run('view')
+#9 C:\wamp\www\bugtracker\framework\web\CWebApplication.php(142): CWebApplication->runController('project/view')
+#10 C:\wamp\www\bugtracker\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 C:\wamp\www\bugtracker\bug_app\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/bugtracker/bug_app/index.php?r=project/view
+---
+2012/10/09 10:29:22 [error] [php] require_once(C:\wamp\www\bugtracker\bug_app\protected\migrations\m121008_083108_create_table_issue.php): failed to open stream: No such file or directory (C:\wamp\www\bugtracker\framework\cli\commands\MigrateCommand.php:429)
+Stack trace:
+#0 C:\wamp\www\bugtracker\framework\cli\commands\MigrateCommand.php(146): MigrateCommand->migrateDown()
+#1 unknown(0): MigrateCommand->actionDown()
+#2 C:\wamp\www\bugtracker\framework\console\CConsoleCommand.php(173): ReflectionMethod->invokeArgs()
+#3 C:\wamp\www\bugtracker\framework\console\CConsoleCommandRunner.php(68): MigrateCommand->run()
+#4 C:\wamp\www\bugtracker\framework\console\CConsoleApplication.php(92): CConsoleCommandRunner->run()
+#5 C:\wamp\www\bugtracker\framework\base\CApplication.php(162): CConsoleApplication->processRequest()
+#6 C:\wamp\www\bugtracker\framework\yiic.php(34): CConsoleApplication->run()
+#7 C:\wamp\www\bugtracker\bug_app\protected\yiic.php(7): require_once()
+#8 C:\wamp\www\bugtracker\bug_app\protected\yiic(4): require_once()
+
+2012/10/09 10:29:42 [error] [php] require_once(C:\wamp\www\bugtracker\bug_app\protected\migrations\m121008_083108_create_table_issue.php): failed to open stream: No such file or directory (C:\wamp\www\bugtracker\framework\cli\commands\MigrateCommand.php:429)
+Stack trace:
+#0 C:\wamp\www\bugtracker\framework\cli\commands\MigrateCommand.php(146): MigrateCommand->migrateDown()
+#1 unknown(0): MigrateCommand->actionDown()
+#2 C:\wamp\www\bugtracker\framework\console\CConsoleCommand.php(173): ReflectionMethod->invokeArgs()
+#3 C:\wamp\www\bugtracker\framework\console\CConsoleCommandRunner.php(68): MigrateCommand->run()
+#4 C:\wamp\www\bugtracker\framework\console\CConsoleApplication.php(92): CConsoleCommandRunner->run()
+#5 C:\wamp\www\bugtracker\framework\base\CApplication.php(162): CConsoleApplication->processRequest()
+#6 C:\wamp\www\bugtracker\framework\yiic.php(34): CConsoleApplication->run()
+#7 C:\wamp\www\bugtracker\bug_app\protected\yiic.php(7): require_once()
+#8 C:\wamp\www\bugtracker\bug_app\protected\yiic(4): require_once()
+
+2012/10/09 10:30:11 [error] [php] require_once(C:\wamp\www\bugtracker\bug_app\protected\migrations\m121008_083108_create_table_issue.php): failed to open stream: No such file or directory (C:\wamp\www\bugtracker\framework\cli\commands\MigrateCommand.php:429)
+Stack trace:
+#0 C:\wamp\www\bugtracker\framework\cli\commands\MigrateCommand.php(146): MigrateCommand->migrateDown()
+#1 unknown(0): MigrateCommand->actionDown()
+#2 C:\wamp\www\bugtracker\framework\console\CConsoleCommand.php(173): ReflectionMethod->invokeArgs()
+#3 C:\wamp\www\bugtracker\framework\console\CConsoleCommandRunner.php(68): MigrateCommand->run()
+#4 C:\wamp\www\bugtracker\framework\console\CConsoleApplication.php(92): CConsoleCommandRunner->run()
+#5 C:\wamp\www\bugtracker\framework\base\CApplication.php(162): CConsoleApplication->processRequest()
+#6 C:\wamp\www\bugtracker\framework\yiic.php(34): CConsoleApplication->run()
+#7 C:\wamp\www\bugtracker\bug_app\protected\yiic.php(7): require_once()
+#8 C:\wamp\www\bugtracker\bug_app\protected\yiic(4): require_once()
+
+2012/10/09 11:35:37 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'bugtracker.issue' doesn't exist. The SQL statement executed was: SHOW COLUMNS FROM `issue`.
+in C:\wamp\www\bugtracker\bug_app\protected\controllers\IssueController.php (125)
+in C:\wamp\www\bugtracker\bug_app\index.php (13)
+2012/10/09 11:35:37 [error] [exception.CDbException] exception 'CDbException' with message 'The table "issue" for active record class "Issue" cannot be found in the database.' in C:\wamp\www\bugtracker\framework\db\ar\CActiveRecord.php:2312
+Stack trace:
+#0 C:\wamp\www\bugtracker\framework\db\ar\CActiveRecord.php(388): CActiveRecordMetaData->__construct(Object(Issue))
+#1 C:\wamp\www\bugtracker\framework\web\CActiveDataProvider.php(75): CActiveRecord::model('Issue')
+#2 C:\wamp\www\bugtracker\bug_app\protected\controllers\IssueController.php(125): CActiveDataProvider->__construct('Issue')
+#3 C:\wamp\www\bugtracker\framework\web\actions\CInlineAction.php(50): IssueController->actionIndex()
+#4 C:\wamp\www\bugtracker\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\bugtracker\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\bugtracker\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#7 C:\wamp\www\bugtracker\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp\www\bugtracker\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp\www\bugtracker\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\bugtracker\framework\web\CController.php(292): CFilterChain->run()
+#11 C:\wamp\www\bugtracker\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\bugtracker\framework\web\CWebApplication.php(283): CController->run('')
+#13 C:\wamp\www\bugtracker\framework\web\CWebApplication.php(142): CWebApplication->runController('issue/')
+#14 C:\wamp\www\bugtracker\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 C:\wamp\www\bugtracker\bug_app\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/bugtracker/bug_app/index.php?r=issue/
+---
+2012/10/09 11:37:26 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[HY000]: General error: 1005 Can't create table 'bugtracker.#sql-11d8_49' (errno: 150). The SQL statement executed was: ALTER TABLE `issue` ADD CONSTRAINT `FK_issue_owner` FOREIGN KEY (`owner_id`) REFERENCES `user` (`id`) ON DELETE CASCADE ON UPDATE RESTRICT.
+2012/10/09 11:37:26 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[HY000]: General error: 1005 Can't create table 'bugtracker.#sql-11d8_49' (errno: 150). The SQL statement executed was: ALTER TABLE `issue` ADD CONSTRAINT `FK_issue_owner` FOREIGN KEY (`owner_id`) REFERENCES `user` (`id`) ON DELETE CASCADE ON UPDATE RESTRICT' in C:\wamp\www\bugtracker\framework\db\CDbCommand.php:354
+Stack trace:
+#0 C:\wamp\www\bugtracker\framework\db\CDbCommand.php(1362): CDbCommand->execute()
+#1 C:\wamp\www\bugtracker\framework\db\CDbMigration.php(344): CDbCommand->addForeignKey('FK_issue_owner', 'issue', 'owner_id', 'user', 'id', 'CASCADE', 'RESTRICT')
+#2 C:\wamp\www\bugtracker\bug_app\protected\migrations\m121009_103913_create_table_issue.php(24): CDbMigration->addForeignKey('FK_issue_owner', 'issue', 'owner_id', 'user', 'id', 'CASCADE', 'RESTRICT')
+#3 C:\wamp\www\bugtracker\framework\cli\commands\MigrateCommand.php(386): m121009_103913_create_table_issue->up()
+#4 C:\wamp\www\bugtracker\framework\cli\commands\MigrateCommand.php(110): MigrateCommand->migrateUp('m121009_103913_...')
+#5 [internal function]: MigrateCommand->actionUp(Array)
+#6 C:\wamp\www\bugtracker\framework\console\CConsoleCommand.php(173): ReflectionMethod->invokeArgs(Object(MigrateCommand), Array)
+#7 C:\wamp\www\bugtracker\framework\console\CConsoleCommandRunner.php(68): CConsoleCommand->run(Array)
+#8 C:\wamp\www\bugtracker\framework\console\CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#9 C:\wamp\www\bugtracker\framework\base\CApplication.php(162): CConsoleApplication->processRequest()
+#10 C:\wamp\www\bugtracker\framework\yiic.php(34): CApplication->run()
+#11 C:\wamp\www\bugtracker\bug_app\protected\yiic.php(7): require_once('C:\wamp\www\bug...')
+#12 C:\wamp\www\bugtracker\bug_app\protected\yiic(4): require_once('C:\wamp\www\bug...')
+#13 {main}
+---
+2012/10/09 11:50:51 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[HY000]: General error: 1005 Can't create table 'bugtracker.#sql-11d8_5b' (errno: 150). The SQL statement executed was: ALTER TABLE `issue` ADD CONSTRAINT `FK_issue_owner` FOREIGN KEY (`owner_id`) REFERENCES `user` (`id`) ON DELETE CASCADE ON UPDATE RESTRICT.
+2012/10/09 11:50:51 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[HY000]: General error: 1005 Can't create table 'bugtracker.#sql-11d8_5b' (errno: 150). The SQL statement executed was: ALTER TABLE `issue` ADD CONSTRAINT `FK_issue_owner` FOREIGN KEY (`owner_id`) REFERENCES `user` (`id`) ON DELETE CASCADE ON UPDATE RESTRICT' in C:\wamp\www\bugtracker\framework\db\CDbCommand.php:354
+Stack trace:
+#0 C:\wamp\www\bugtracker\framework\db\CDbCommand.php(1362): CDbCommand->execute()
+#1 C:\wamp\www\bugtracker\framework\db\CDbMigration.php(344): CDbCommand->addForeignKey('FK_issue_owner', 'issue', 'owner_id', 'user', 'id', 'CASCADE', 'RESTRICT')
+#2 C:\wamp\www\bugtracker\bug_app\protected\migrations\m121009_103913_create_table_issue.php(24): CDbMigration->addForeignKey('FK_issue_owner', 'issue', 'owner_id', 'user', 'id', 'CASCADE', 'RESTRICT')
+#3 C:\wamp\www\bugtracker\framework\cli\commands\MigrateCommand.php(386): m121009_103913_create_table_issue->up()
+#4 C:\wamp\www\bugtracker\framework\cli\commands\MigrateCommand.php(110): MigrateCommand->migrateUp('m121009_103913_...')
+#5 [internal function]: MigrateCommand->actionUp(Array)
+#6 C:\wamp\www\bugtracker\framework\console\CConsoleCommand.php(173): ReflectionMethod->invokeArgs(Object(MigrateCommand), Array)
+#7 C:\wamp\www\bugtracker\framework\console\CConsoleCommandRunner.php(68): CConsoleCommand->run(Array)
+#8 C:\wamp\www\bugtracker\framework\console\CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#9 C:\wamp\www\bugtracker\framework\base\CApplication.php(162): CConsoleApplication->processRequest()
+#10 C:\wamp\www\bugtracker\framework\yiic.php(34): CApplication->run()
+#11 C:\wamp\www\bugtracker\bug_app\protected\yiic.php(7): require_once('C:\wamp\www\bug...')
+#12 C:\wamp\www\bugtracker\bug_app\protected\yiic(4): require_once('C:\wamp\www\bug...')
+#13 {main}
+---
+2012/10/09 12:18:40 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1217 Cannot delete or update a parent row: a foreign key constraint fails. The SQL statement executed was: DROP TABLE `project`.
+2012/10/09 12:18:40 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1217 Cannot delete or update a parent row: a foreign key constraint fails. The SQL statement executed was: DROP TABLE `project`' in C:\wamp\www\bugtracker\framework\db\CDbCommand.php:354
+Stack trace:
+#0 C:\wamp\www\bugtracker\framework\db\CDbCommand.php(1274): CDbCommand->execute()
+#1 C:\wamp\www\bugtracker\framework\db\CDbMigration.php(254): CDbCommand->dropTable('project')
+#2 C:\wamp\www\bugtracker\bug_app\protected\migrations\m121007_083605_create_table_project.php(21): CDbMigration->dropTable('project')
+#3 C:\wamp\www\bugtracker\framework\cli\commands\MigrateCommand.php(411): m121007_083605_create_table_project->down()
+#4 C:\wamp\www\bugtracker\framework\cli\commands\MigrateCommand.php(146): MigrateCommand->migrateDown('m121007_083605_...')
+#5 [internal function]: MigrateCommand->actionDown(Array)
+#6 C:\wamp\www\bugtracker\framework\console\CConsoleCommand.php(173): ReflectionMethod->invokeArgs(Object(MigrateCommand), Array)
+#7 C:\wamp\www\bugtracker\framework\console\CConsoleCommandRunner.php(68): CConsoleCommand->run(Array)
+#8 C:\wamp\www\bugtracker\framework\console\CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#9 C:\wamp\www\bugtracker\framework\base\CApplication.php(162): CConsoleApplication->processRequest()
+#10 C:\wamp\www\bugtracker\framework\yiic.php(34): CApplication->run()
+#11 C:\wamp\www\bugtracker\bug_app\protected\yiic.php(7): require_once('C:\wamp\www\bug...')
+#12 C:\wamp\www\bugtracker\bug_app\protected\yiic(4): require_once('C:\wamp\www\bug...')
+#13 {main}
+---
+2012/10/09 12:19:16 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'issue' already exists. The SQL statement executed was: CREATE TABLE `issue` (
+	`id` INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
+	`name` varchar(256) NOT NULL,
+	`description` varchar(2000),
+	`project_id` INTEGER,
+	`type_id` INTEGER,
+	`status_id` INTEGER,
+	`owner_id` INTEGER,
+	`requester_id` INTEGER,
+	`create_time` DATETIME,
+	`create_user_id` INTEGER,
+	`update_time` DATETIME,
+	`update_user_id` INTEGER
+) ENGINE=InnoDB.
+2012/10/09 12:19:16 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'issue' already exists. The SQL statement executed was: CREATE TABLE `issue` (
+	`id` INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
+	`name` varchar(256) NOT NULL,
+	`description` varchar(2000),
+	`project_id` INTEGER,
+	`type_id` INTEGER,
+	`status_id` INTEGER,
+	`owner_id` INTEGER,
+	`requester_id` INTEGER,
+	`create_time` DATETIME,
+	`create_user_id` INTEGER,
+	`update_time` DATETIME,
+	`update_user_id` INTEGER
+) ENGINE=InnoDB' in C:\wamp\www\bugtracker\framework\db\CDbCommand.php:354
+Stack trace:
+#0 C:\wamp\www\bugtracker\framework\db\CDbCommand.php(1251): CDbCommand->execute()
+#1 C:\wamp\www\bugtracker\framework\db\CDbMigration.php(229): CDbCommand->createTable('issue', Array, 'ENGINE=InnoDB')
+#2 C:\wamp\www\bugtracker\bug_app\protected\migrations\m121009_103913_create_table_issue.php(21): CDbMigration->createTable('issue', Array, 'ENGINE=InnoDB')
+#3 C:\wamp\www\bugtracker\framework\cli\commands\MigrateCommand.php(386): m121009_103913_create_table_issue->up()
+#4 C:\wamp\www\bugtracker\framework\cli\commands\MigrateCommand.php(110): MigrateCommand->migrateUp('m121009_103913_...')
+#5 [internal function]: MigrateCommand->actionUp(Array)
+#6 C:\wamp\www\bugtracker\framework\console\CConsoleCommand.php(173): ReflectionMethod->invokeArgs(Object(MigrateCommand), Array)
+#7 C:\wamp\www\bugtracker\framework\console\CConsoleCommandRunner.php(68): CConsoleCommand->run(Array)
+#8 C:\wamp\www\bugtracker\framework\console\CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#9 C:\wamp\www\bugtracker\framework\base\CApplication.php(162): CConsoleApplication->processRequest()
+#10 C:\wamp\www\bugtracker\framework\yiic.php(34): CApplication->run()
+#11 C:\wamp\www\bugtracker\bug_app\protected\yiic.php(7): require_once('C:\wamp\www\bug...')
+#12 C:\wamp\www\bugtracker\bug_app\protected\yiic(4): require_once('C:\wamp\www\bug...')
+#13 {main}
+---
+2012/10/09 12:20:53 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'bugtracker.tbl_migration' doesn't exist. The SQL statement executed was: SHOW COLUMNS FROM `tbl_migration`.
+2012/10/09 12:20:58 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[HY000]: General error: 1005 Can't create table 'bugtracker.#sql-11d8_78' (errno: 150). The SQL statement executed was: ALTER TABLE `issue` ADD CONSTRAINT `fk_issue_owner` FOREIGN KEY (`owner_id`) REFERENCES `user` (`id`) ON DELETE CASCADE ON UPDATE RESTRICT.
+2012/10/09 12:20:58 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[HY000]: General error: 1005 Can't create table 'bugtracker.#sql-11d8_78' (errno: 150). The SQL statement executed was: ALTER TABLE `issue` ADD CONSTRAINT `fk_issue_owner` FOREIGN KEY (`owner_id`) REFERENCES `user` (`id`) ON DELETE CASCADE ON UPDATE RESTRICT' in C:\wamp\www\bugtracker\framework\db\CDbCommand.php:354
+Stack trace:
+#0 C:\wamp\www\bugtracker\framework\db\CDbCommand.php(1362): CDbCommand->execute()
+#1 C:\wamp\www\bugtracker\framework\db\CDbMigration.php(344): CDbCommand->addForeignKey('fk_issue_owner', 'issue', 'owner_id', 'user', 'id', 'CASCADE', 'RESTRICT')
+#2 C:\wamp\www\bugtracker\bug_app\protected\migrations\m121009_103913_create_table_issue.php(24): CDbMigration->addForeignKey('fk_issue_owner', 'issue', 'owner_id', 'user', 'id', 'CASCADE', 'RESTRICT')
+#3 C:\wamp\www\bugtracker\framework\cli\commands\MigrateCommand.php(386): m121009_103913_create_table_issue->up()
+#4 C:\wamp\www\bugtracker\framework\cli\commands\MigrateCommand.php(110): MigrateCommand->migrateUp('m121009_103913_...')
+#5 [internal function]: MigrateCommand->actionUp(Array)
+#6 C:\wamp\www\bugtracker\framework\console\CConsoleCommand.php(173): ReflectionMethod->invokeArgs(Object(MigrateCommand), Array)
+#7 C:\wamp\www\bugtracker\framework\console\CConsoleCommandRunner.php(68): CConsoleCommand->run(Array)
+#8 C:\wamp\www\bugtracker\framework\console\CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#9 C:\wamp\www\bugtracker\framework\base\CApplication.php(162): CConsoleApplication->processRequest()
+#10 C:\wamp\www\bugtracker\framework\yiic.php(34): CApplication->run()
+#11 C:\wamp\www\bugtracker\bug_app\protected\yiic.php(7): require_once('C:\wamp\www\bug...')
+#12 C:\wamp\www\bugtracker\bug_app\protected\yiic(4): require_once('C:\wamp\www\bug...')
+#13 {main}
+---
+2012/10/09 12:23:19 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'issue' already exists. The SQL statement executed was: CREATE TABLE `issue` (
+	`id` INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
+	`name` varchar(256) NOT NULL,
+	`description` varchar(2000),
+	`project_id` INTEGER,
+	`type_id` INTEGER,
+	`status_id` INTEGER,
+	`owner_id` INTEGER,
+	`requester_id` INTEGER,
+	`create_time` DATETIME,
+	`create_user_id` INTEGER,
+	`update_time` DATETIME,
+	`update_user_id` INTEGER
+) ENGINE=InnoDB.
+2012/10/09 12:23:19 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'issue' already exists. The SQL statement executed was: CREATE TABLE `issue` (
+	`id` INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
+	`name` varchar(256) NOT NULL,
+	`description` varchar(2000),
+	`project_id` INTEGER,
+	`type_id` INTEGER,
+	`status_id` INTEGER,
+	`owner_id` INTEGER,
+	`requester_id` INTEGER,
+	`create_time` DATETIME,
+	`create_user_id` INTEGER,
+	`update_time` DATETIME,
+	`update_user_id` INTEGER
+) ENGINE=InnoDB' in C:\wamp\www\bugtracker\framework\db\CDbCommand.php:354
+Stack trace:
+#0 C:\wamp\www\bugtracker\framework\db\CDbCommand.php(1251): CDbCommand->execute()
+#1 C:\wamp\www\bugtracker\framework\db\CDbMigration.php(229): CDbCommand->createTable('issue', Array, 'ENGINE=InnoDB')
+#2 C:\wamp\www\bugtracker\bug_app\protected\migrations\m121009_103913_create_table_issue.php(21): CDbMigration->createTable('issue', Array, 'ENGINE=InnoDB')
+#3 C:\wamp\www\bugtracker\framework\cli\commands\MigrateCommand.php(386): m121009_103913_create_table_issue->up()
+#4 C:\wamp\www\bugtracker\framework\cli\commands\MigrateCommand.php(110): MigrateCommand->migrateUp('m121009_103913_...')
+#5 [internal function]: MigrateCommand->actionUp(Array)
+#6 C:\wamp\www\bugtracker\framework\console\CConsoleCommand.php(173): ReflectionMethod->invokeArgs(Object(MigrateCommand), Array)
+#7 C:\wamp\www\bugtracker\framework\console\CConsoleCommandRunner.php(68): CConsoleCommand->run(Array)
+#8 C:\wamp\www\bugtracker\framework\console\CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#9 C:\wamp\www\bugtracker\framework\base\CApplication.php(162): CConsoleApplication->processRequest()
+#10 C:\wamp\www\bugtracker\framework\yiic.php(34): CApplication->run()
+#11 C:\wamp\www\bugtracker\bug_app\protected\yiic.php(7): require_once('C:\wamp\www\bug...')
+#12 C:\wamp\www\bugtracker\bug_app\protected\yiic(4): require_once('C:\wamp\www\bug...')
+#13 {main}
+---
+2012/10/09 12:29:25 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1217 Cannot delete or update a parent row: a foreign key constraint fails. The SQL statement executed was: DROP TABLE `project`.
+2012/10/09 12:29:25 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1217 Cannot delete or update a parent row: a foreign key constraint fails. The SQL statement executed was: DROP TABLE `project`' in C:\wamp\www\bugtracker\framework\db\CDbCommand.php:354
+Stack trace:
+#0 C:\wamp\www\bugtracker\framework\db\CDbCommand.php(1274): CDbCommand->execute()
+#1 C:\wamp\www\bugtracker\framework\db\CDbMigration.php(254): CDbCommand->dropTable('project')
+#2 C:\wamp\www\bugtracker\bug_app\protected\migrations\m121007_083605_create_table_project.php(21): CDbMigration->dropTable('project')
+#3 C:\wamp\www\bugtracker\framework\cli\commands\MigrateCommand.php(411): m121007_083605_create_table_project->down()
+#4 C:\wamp\www\bugtracker\framework\cli\commands\MigrateCommand.php(146): MigrateCommand->migrateDown('m121007_083605_...')
+#5 [internal function]: MigrateCommand->actionDown(Array)
+#6 C:\wamp\www\bugtracker\framework\console\CConsoleCommand.php(173): ReflectionMethod->invokeArgs(Object(MigrateCommand), Array)
+#7 C:\wamp\www\bugtracker\framework\console\CConsoleCommandRunner.php(68): CConsoleCommand->run(Array)
+#8 C:\wamp\www\bugtracker\framework\console\CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#9 C:\wamp\www\bugtracker\framework\base\CApplication.php(162): CConsoleApplication->processRequest()
+#10 C:\wamp\www\bugtracker\framework\yiic.php(34): CApplication->run()
+#11 C:\wamp\www\bugtracker\bug_app\protected\yiic.php(7): require_once('C:\wamp\www\bug...')
+#12 C:\wamp\www\bugtracker\bug_app\protected\yiic(4): require_once('C:\wamp\www\bug...')
+#13 {main}
+---
+2012/10/09 12:29:35 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'issue' already exists. The SQL statement executed was: CREATE TABLE `issue` (
+	`id` INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
+	`name` varchar(256) NOT NULL,
+	`description` varchar(2000),
+	`project_id` INTEGER,
+	`type_id` INTEGER,
+	`status_id` INTEGER,
+	`owner_id` INTEGER,
+	`requester_id` INTEGER,
+	`create_time` DATETIME,
+	`create_user_id` INTEGER,
+	`update_time` DATETIME,
+	`update_user_id` INTEGER
+) ENGINE=InnoDB.
+2012/10/09 12:29:35 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'issue' already exists. The SQL statement executed was: CREATE TABLE `issue` (
+	`id` INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
+	`name` varchar(256) NOT NULL,
+	`description` varchar(2000),
+	`project_id` INTEGER,
+	`type_id` INTEGER,
+	`status_id` INTEGER,
+	`owner_id` INTEGER,
+	`requester_id` INTEGER,
+	`create_time` DATETIME,
+	`create_user_id` INTEGER,
+	`update_time` DATETIME,
+	`update_user_id` INTEGER
+) ENGINE=InnoDB' in C:\wamp\www\bugtracker\framework\db\CDbCommand.php:354
+Stack trace:
+#0 C:\wamp\www\bugtracker\framework\db\CDbCommand.php(1251): CDbCommand->execute()
+#1 C:\wamp\www\bugtracker\framework\db\CDbMigration.php(229): CDbCommand->createTable('issue', Array, 'ENGINE=InnoDB')
+#2 C:\wamp\www\bugtracker\bug_app\protected\migrations\m121009_103913_create_table_issue.php(21): CDbMigration->createTable('issue', Array, 'ENGINE=InnoDB')
+#3 C:\wamp\www\bugtracker\framework\cli\commands\MigrateCommand.php(386): m121009_103913_create_table_issue->up()
+#4 C:\wamp\www\bugtracker\framework\cli\commands\MigrateCommand.php(110): MigrateCommand->migrateUp('m121009_103913_...')
+#5 [internal function]: MigrateCommand->actionUp(Array)
+#6 C:\wamp\www\bugtracker\framework\console\CConsoleCommand.php(173): ReflectionMethod->invokeArgs(Object(MigrateCommand), Array)
+#7 C:\wamp\www\bugtracker\framework\console\CConsoleCommandRunner.php(68): CConsoleCommand->run(Array)
+#8 C:\wamp\www\bugtracker\framework\console\CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#9 C:\wamp\www\bugtracker\framework\base\CApplication.php(162): CConsoleApplication->processRequest()
+#10 C:\wamp\www\bugtracker\framework\yiic.php(34): CApplication->run()
+#11 C:\wamp\www\bugtracker\bug_app\protected\yiic.php(7): require_once('C:\wamp\www\bug...')
+#12 C:\wamp\www\bugtracker\bug_app\protected\yiic(4): require_once('C:\wamp\www\bug...')
+#13 {main}
+---
+2012/10/09 12:30:33 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1217 Cannot delete or update a parent row: a foreign key constraint fails. The SQL statement executed was: DROP TABLE `project`.
+2012/10/09 12:30:33 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1217 Cannot delete or update a parent row: a foreign key constraint fails. The SQL statement executed was: DROP TABLE `project`' in C:\wamp\www\bugtracker\framework\db\CDbCommand.php:354
+Stack trace:
+#0 C:\wamp\www\bugtracker\framework\db\CDbCommand.php(1274): CDbCommand->execute()
+#1 C:\wamp\www\bugtracker\framework\db\CDbMigration.php(254): CDbCommand->dropTable('project')
+#2 C:\wamp\www\bugtracker\bug_app\protected\migrations\m121007_083605_create_table_project.php(21): CDbMigration->dropTable('project')
+#3 C:\wamp\www\bugtracker\framework\cli\commands\MigrateCommand.php(411): m121007_083605_create_table_project->down()
+#4 C:\wamp\www\bugtracker\framework\cli\commands\MigrateCommand.php(146): MigrateCommand->migrateDown('m121007_083605_...')
+#5 [internal function]: MigrateCommand->actionDown(Array)
+#6 C:\wamp\www\bugtracker\framework\console\CConsoleCommand.php(173): ReflectionMethod->invokeArgs(Object(MigrateCommand), Array)
+#7 C:\wamp\www\bugtracker\framework\console\CConsoleCommandRunner.php(68): CConsoleCommand->run(Array)
+#8 C:\wamp\www\bugtracker\framework\console\CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#9 C:\wamp\www\bugtracker\framework\base\CApplication.php(162): CConsoleApplication->processRequest()
+#10 C:\wamp\www\bugtracker\framework\yiic.php(34): CApplication->run()
+#11 C:\wamp\www\bugtracker\bug_app\protected\yiic.php(7): require_once('C:\wamp\www\bug...')
+#12 C:\wamp\www\bugtracker\bug_app\protected\yiic(4): require_once('C:\wamp\www\bug...')
+#13 {main}
+---
+2012/10/09 12:30:42 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'issue' already exists. The SQL statement executed was: CREATE TABLE `issue` (
+	`id` INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
+	`name` varchar(256) NOT NULL,
+	`description` varchar(2000),
+	`project_id` INTEGER,
+	`type_id` INTEGER,
+	`status_id` INTEGER,
+	`owner_id` INTEGER,
+	`requester_id` INTEGER,
+	`create_time` DATETIME,
+	`create_user_id` INTEGER,
+	`update_time` DATETIME,
+	`update_user_id` INTEGER
+) ENGINE=InnoDB.
+2012/10/09 12:30:42 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'issue' already exists. The SQL statement executed was: CREATE TABLE `issue` (
+	`id` INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
+	`name` varchar(256) NOT NULL,
+	`description` varchar(2000),
+	`project_id` INTEGER,
+	`type_id` INTEGER,
+	`status_id` INTEGER,
+	`owner_id` INTEGER,
+	`requester_id` INTEGER,
+	`create_time` DATETIME,
+	`create_user_id` INTEGER,
+	`update_time` DATETIME,
+	`update_user_id` INTEGER
+) ENGINE=InnoDB' in C:\wamp\www\bugtracker\framework\db\CDbCommand.php:354
+Stack trace:
+#0 C:\wamp\www\bugtracker\framework\db\CDbCommand.php(1251): CDbCommand->execute()
+#1 C:\wamp\www\bugtracker\framework\db\CDbMigration.php(229): CDbCommand->createTable('issue', Array, 'ENGINE=InnoDB')
+#2 C:\wamp\www\bugtracker\bug_app\protected\migrations\m121009_103913_create_table_issue.php(21): CDbMigration->createTable('issue', Array, 'ENGINE=InnoDB')
+#3 C:\wamp\www\bugtracker\framework\cli\commands\MigrateCommand.php(386): m121009_103913_create_table_issue->up()
+#4 C:\wamp\www\bugtracker\framework\cli\commands\MigrateCommand.php(110): MigrateCommand->migrateUp('m121009_103913_...')
+#5 [internal function]: MigrateCommand->actionUp(Array)
+#6 C:\wamp\www\bugtracker\framework\console\CConsoleCommand.php(173): ReflectionMethod->invokeArgs(Object(MigrateCommand), Array)
+#7 C:\wamp\www\bugtracker\framework\console\CConsoleCommandRunner.php(68): CConsoleCommand->run(Array)
+#8 C:\wamp\www\bugtracker\framework\console\CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#9 C:\wamp\www\bugtracker\framework\base\CApplication.php(162): CConsoleApplication->processRequest()
+#10 C:\wamp\www\bugtracker\framework\yiic.php(34): CApplication->run()
+#11 C:\wamp\www\bugtracker\bug_app\protected\yiic.php(7): require_once('C:\wamp\www\bug...')
+#12 C:\wamp\www\bugtracker\bug_app\protected\yiic(4): require_once('C:\wamp\www\bug...')
+#13 {main}
+---
+2012/10/09 12:31:34 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1217 Cannot delete or update a parent row: a foreign key constraint fails. The SQL statement executed was: DROP TABLE `project`.
+2012/10/09 12:31:34 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1217 Cannot delete or update a parent row: a foreign key constraint fails. The SQL statement executed was: DROP TABLE `project`' in C:\wamp\www\bugtracker\framework\db\CDbCommand.php:354
+Stack trace:
+#0 C:\wamp\www\bugtracker\framework\db\CDbCommand.php(1274): CDbCommand->execute()
+#1 C:\wamp\www\bugtracker\framework\db\CDbMigration.php(254): CDbCommand->dropTable('project')
+#2 C:\wamp\www\bugtracker\bug_app\protected\migrations\m121007_083605_create_table_project.php(21): CDbMigration->dropTable('project')
+#3 C:\wamp\www\bugtracker\framework\cli\commands\MigrateCommand.php(411): m121007_083605_create_table_project->down()
+#4 C:\wamp\www\bugtracker\framework\cli\commands\MigrateCommand.php(146): MigrateCommand->migrateDown('m121007_083605_...')
+#5 [internal function]: MigrateCommand->actionDown(Array)
+#6 C:\wamp\www\bugtracker\framework\console\CConsoleCommand.php(173): ReflectionMethod->invokeArgs(Object(MigrateCommand), Array)
+#7 C:\wamp\www\bugtracker\framework\console\CConsoleCommandRunner.php(68): CConsoleCommand->run(Array)
+#8 C:\wamp\www\bugtracker\framework\console\CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#9 C:\wamp\www\bugtracker\framework\base\CApplication.php(162): CConsoleApplication->processRequest()
+#10 C:\wamp\www\bugtracker\framework\yiic.php(34): CApplication->run()
+#11 C:\wamp\www\bugtracker\bug_app\protected\yiic.php(7): require_once('C:\wamp\www\bug...')
+#12 C:\wamp\www\bugtracker\bug_app\protected\yiic(4): require_once('C:\wamp\www\bug...')
+#13 {main}
+---
+2012/10/09 12:31:41 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'issue' already exists. The SQL statement executed was: CREATE TABLE `issue` (
+	`id` INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
+	`name` varchar(256) NOT NULL,
+	`description` varchar(2000),
+	`project_id` INTEGER,
+	`type_id` INTEGER,
+	`status_id` INTEGER,
+	`owner_id` INTEGER,
+	`requester_id` INTEGER,
+	`create_time` DATETIME,
+	`create_user_id` INTEGER,
+	`update_time` DATETIME,
+	`update_user_id` INTEGER
+) ENGINE=InnoDB.
+2012/10/09 12:31:41 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'issue' already exists. The SQL statement executed was: CREATE TABLE `issue` (
+	`id` INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
+	`name` varchar(256) NOT NULL,
+	`description` varchar(2000),
+	`project_id` INTEGER,
+	`type_id` INTEGER,
+	`status_id` INTEGER,
+	`owner_id` INTEGER,
+	`requester_id` INTEGER,
+	`create_time` DATETIME,
+	`create_user_id` INTEGER,
+	`update_time` DATETIME,
+	`update_user_id` INTEGER
+) ENGINE=InnoDB' in C:\wamp\www\bugtracker\framework\db\CDbCommand.php:354
+Stack trace:
+#0 C:\wamp\www\bugtracker\framework\db\CDbCommand.php(1251): CDbCommand->execute()
+#1 C:\wamp\www\bugtracker\framework\db\CDbMigration.php(229): CDbCommand->createTable('issue', Array, 'ENGINE=InnoDB')
+#2 C:\wamp\www\bugtracker\bug_app\protected\migrations\m121009_103913_create_table_issue.php(21): CDbMigration->createTable('issue', Array, 'ENGINE=InnoDB')
+#3 C:\wamp\www\bugtracker\framework\cli\commands\MigrateCommand.php(386): m121009_103913_create_table_issue->up()
+#4 C:\wamp\www\bugtracker\framework\cli\commands\MigrateCommand.php(110): MigrateCommand->migrateUp('m121009_103913_...')
+#5 [internal function]: MigrateCommand->actionUp(Array)
+#6 C:\wamp\www\bugtracker\framework\console\CConsoleCommand.php(173): ReflectionMethod->invokeArgs(Object(MigrateCommand), Array)
+#7 C:\wamp\www\bugtracker\framework\console\CConsoleCommandRunner.php(68): CConsoleCommand->run(Array)
+#8 C:\wamp\www\bugtracker\framework\console\CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#9 C:\wamp\www\bugtracker\framework\base\CApplication.php(162): CConsoleApplication->processRequest()
+#10 C:\wamp\www\bugtracker\framework\yiic.php(34): CApplication->run()
+#11 C:\wamp\www\bugtracker\bug_app\protected\yiic.php(7): require_once('C:\wamp\www\bug...')
+#12 C:\wamp\www\bugtracker\bug_app\protected\yiic(4): require_once('C:\wamp\www\bug...')
+#13 {main}
+---
+2012/10/09 12:34:33 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1217 Cannot delete or update a parent row: a foreign key constraint fails. The SQL statement executed was: DROP TABLE `project`.
+2012/10/09 12:34:33 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1217 Cannot delete or update a parent row: a foreign key constraint fails. The SQL statement executed was: DROP TABLE `project`' in C:\wamp\www\bugtracker\framework\db\CDbCommand.php:354
+Stack trace:
+#0 C:\wamp\www\bugtracker\framework\db\CDbCommand.php(1274): CDbCommand->execute()
+#1 C:\wamp\www\bugtracker\framework\db\CDbMigration.php(254): CDbCommand->dropTable('project')
+#2 C:\wamp\www\bugtracker\bug_app\protected\migrations\m121007_083605_create_table_project.php(21): CDbMigration->dropTable('project')
+#3 C:\wamp\www\bugtracker\framework\cli\commands\MigrateCommand.php(411): m121007_083605_create_table_project->down()
+#4 C:\wamp\www\bugtracker\framework\cli\commands\MigrateCommand.php(146): MigrateCommand->migrateDown('m121007_083605_...')
+#5 [internal function]: MigrateCommand->actionDown(Array)
+#6 C:\wamp\www\bugtracker\framework\console\CConsoleCommand.php(173): ReflectionMethod->invokeArgs(Object(MigrateCommand), Array)
+#7 C:\wamp\www\bugtracker\framework\console\CConsoleCommandRunner.php(68): CConsoleCommand->run(Array)
+#8 C:\wamp\www\bugtracker\framework\console\CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#9 C:\wamp\www\bugtracker\framework\base\CApplication.php(162): CConsoleApplication->processRequest()
+#10 C:\wamp\www\bugtracker\framework\yiic.php(34): CApplication->run()
+#11 C:\wamp\www\bugtracker\bug_app\protected\yiic.php(7): require_once('C:\wamp\www\bug...')
+#12 C:\wamp\www\bugtracker\bug_app\protected\yiic(4): require_once('C:\wamp\www\bug...')
+#13 {main}
+---
+2012/10/09 12:34:59 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'issue' already exists. The SQL statement executed was: CREATE TABLE `issue` (
+	`id` INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
+	`name` varchar(256) NOT NULL,
+	`description` varchar(2000),
+	`project_id` INTEGER,
+	`type_id` INTEGER,
+	`status_id` INTEGER,
+	`owner_id` INTEGER,
+	`requester_id` INTEGER,
+	`create_time` DATETIME,
+	`create_user_id` INTEGER,
+	`update_time` DATETIME,
+	`update_user_id` INTEGER
+) ENGINE=InnoDB.
+2012/10/09 12:34:59 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'issue' already exists. The SQL statement executed was: CREATE TABLE `issue` (
+	`id` INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
+	`name` varchar(256) NOT NULL,
+	`description` varchar(2000),
+	`project_id` INTEGER,
+	`type_id` INTEGER,
+	`status_id` INTEGER,
+	`owner_id` INTEGER,
+	`requester_id` INTEGER,
+	`create_time` DATETIME,
+	`create_user_id` INTEGER,
+	`update_time` DATETIME,
+	`update_user_id` INTEGER
+) ENGINE=InnoDB' in C:\wamp\www\bugtracker\framework\db\CDbCommand.php:354
+Stack trace:
+#0 C:\wamp\www\bugtracker\framework\db\CDbCommand.php(1251): CDbCommand->execute()
+#1 C:\wamp\www\bugtracker\framework\db\CDbMigration.php(229): CDbCommand->createTable('issue', Array, 'ENGINE=InnoDB')
+#2 C:\wamp\www\bugtracker\bug_app\protected\migrations\m121009_103913_create_table_issue.php(21): CDbMigration->createTable('issue', Array, 'ENGINE=InnoDB')
+#3 C:\wamp\www\bugtracker\framework\cli\commands\MigrateCommand.php(386): m121009_103913_create_table_issue->up()
+#4 C:\wamp\www\bugtracker\framework\cli\commands\MigrateCommand.php(110): MigrateCommand->migrateUp('m121009_103913_...')
+#5 [internal function]: MigrateCommand->actionUp(Array)
+#6 C:\wamp\www\bugtracker\framework\console\CConsoleCommand.php(173): ReflectionMethod->invokeArgs(Object(MigrateCommand), Array)
+#7 C:\wamp\www\bugtracker\framework\console\CConsoleCommandRunner.php(68): CConsoleCommand->run(Array)
+#8 C:\wamp\www\bugtracker\framework\console\CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#9 C:\wamp\www\bugtracker\framework\base\CApplication.php(162): CConsoleApplication->processRequest()
+#10 C:\wamp\www\bugtracker\framework\yiic.php(34): CApplication->run()
+#11 C:\wamp\www\bugtracker\bug_app\protected\yiic.php(7): require_once('C:\wamp\www\bug...')
+#12 C:\wamp\www\bugtracker\bug_app\protected\yiic(4): require_once('C:\wamp\www\bug...')
+#13 {main}
+---

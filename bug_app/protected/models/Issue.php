@@ -11,6 +11,18 @@
  */
 class Issue extends CActiveRecord
 {
+	
+	const TYPE_BUG=0;
+	const TYPE_FEATURE=1;
+	const TYPE_TASK=2;
+	public function getTypeOptions()
+		{
+		return array(
+		self::TYPE_BUG=>'Bug',
+		self::TYPE_FEATURE=>'Feature',
+		self::TYPE_TASK=>'Task',
+		);
+	}
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
