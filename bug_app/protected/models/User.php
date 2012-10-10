@@ -1,32 +1,21 @@
 <?php
 
 /**
- * This is the model class for table "issue".
+ * This is the model class for table "user".
  *
- * The followings are the available columns in table 'issue':
+ * The followings are the available columns in table 'user':
  * @property integer $id
- * @property integer $project_id
- * @property string $name
- * @property string $detail
+ * @property string $name_first
+ * @property string $name_last
+ * @property string $email
+ * @property string $password
  */
-class Issue extends CActiveRecord
+class User extends CActiveRecord
 {
-	
-	const TYPE_BUG=0;
-	const TYPE_FEATURE=1;
-	const TYPE_TASK=2;
-	public function getTypeOptions()
-		{
-		return array(
-		self::TYPE_BUG=>'Bug',
-		self::TYPE_FEATURE=>'Feature',
-		self::TYPE_TASK=>'Task',
-		);
-	}
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
-	 * @return Issue the static model class
+	 * @return User the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{
@@ -38,7 +27,7 @@ class Issue extends CActiveRecord
 	 */
 	public function tableName()
 	{
-		return 'issue';
+		return 'user';
 	}
 
 	/**
@@ -49,13 +38,11 @@ class Issue extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('project_id, name', 'required'),
-			array('project_id', 'numerical', 'integerOnly'=>true),
-			array('name', 'length', 'max'=>255),
-			array('detail', 'safe'),
+			array('name_first, name_last, email, password', 'required'),
+			array('name_first, name_last, email, password', 'length', 'max'=>255),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, project_id, name, detail', 'safe', 'on'=>'search'),
+			array('id, name_first, name_last, email, password', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -77,9 +64,10 @@ class Issue extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'project_id' => 'Project',
-			'name' => 'Name',
-			'detail' => 'Detail',
+			'name_first' => 'Name First',
+			'name_last' => 'Name Last',
+			'email' => 'Email',
+			'password' => 'Password',
 		);
 	}
 
@@ -95,9 +83,10 @@ class Issue extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('id',$this->id);
-		$criteria->compare('project_id',$this->project_id);
-		$criteria->compare('name',$this->name,true);
-		$criteria->compare('detail',$this->detail,true);
+		$criteria->compare('name_first',$this->name_first,true);
+		$criteria->compare('name_last',$this->name_last,true);
+		$criteria->compare('email',$this->email,true);
+		$criteria->compare('password',$this->password,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
