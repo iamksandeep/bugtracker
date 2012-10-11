@@ -734,6 +734,7 @@ Stack trace:
 #12 C:\wamp\www\bugtracker\bug_app\protected\yiic(4): require_once('C:\wamp\www\bug...')
 #13 {main}
 ---
+<<<<<<< HEAD
 2012/10/08 08:49:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "form".' in C:\wamp\www\bugtracker\framework\web\CController.php:484
 Stack trace:
 #0 C:\wamp\www\bugtracker\framework\web\CController.php(271): CController->missingAction('form')
@@ -1634,4 +1635,121 @@ Stack trace:
 #11 C:\wamp\www\bugtracker\bug_app\protected\yiic.php(7): require_once('C:\wamp\www\bug...')
 #12 C:\wamp\www\bugtracker\bug_app\protected\yiic(4): require_once('C:\wamp\www\bug...')
 #13 {main}
+---
+=======
+>>>>>>> parent of 9137825... After Creating Form
+2012/10/10 06:19:53 [error] [exception.CException] exception 'CException' with message 'm121010_060344_create_table_user and its behaviors do not have a method or closure named "crateTable".' in C:\wamp\www\bugtracker\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\wamp\www\bugtracker\bug_app\protected\migrations\m121010_060344_create_table_user.php(19): CComponent->__call('crateTable', Array)
+#1 C:\wamp\www\bugtracker\bug_app\protected\migrations\m121010_060344_create_table_user.php(19): m121010_060344_create_table_user->crateTable('user', Array, 'ENGINE=InnoDB')
+#2 C:\wamp\www\bugtracker\framework\cli\commands\MigrateCommand.php(386): m121010_060344_create_table_user->up()
+#3 C:\wamp\www\bugtracker\framework\cli\commands\MigrateCommand.php(110): MigrateCommand->migrateUp('m121010_060344_...')
+#4 [internal function]: MigrateCommand->actionUp(Array)
+#5 C:\wamp\www\bugtracker\framework\console\CConsoleCommand.php(173): ReflectionMethod->invokeArgs(Object(MigrateCommand), Array)
+#6 C:\wamp\www\bugtracker\framework\console\CConsoleCommandRunner.php(68): CConsoleCommand->run(Array)
+#7 C:\wamp\www\bugtracker\framework\console\CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#8 C:\wamp\www\bugtracker\framework\base\CApplication.php(162): CConsoleApplication->processRequest()
+#9 C:\wamp\www\bugtracker\framework\yiic.php(34): CApplication->run()
+#10 C:\wamp\www\bugtracker\bug_app\protected\yiic.php(7): require_once('C:\wamp\www\bug...')
+#11 C:\wamp\www\bugtracker\bug_app\protected\yiic(4): require_once('C:\wamp\www\bug...')
+#12 {main}
+---
+2012/10/10 06:41:04 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42000]: Syntax error or access violation: 1075 Incorrect table definition; there can be only one auto column and it must be defined as a key. The SQL statement executed was: CREATE TABLE `project_user_assignment` (
+	`project_id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	`user_id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	`create_time` DATETIME,
+	`create_user_id` INTEGER,
+	`update_time` DATETIME,
+	`update_user_id` INTEGER
+) ENGINE = InnoDB.
+2012/10/10 06:41:04 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1075 Incorrect table definition; there can be only one auto column and it must be defined as a key. The SQL statement executed was: CREATE TABLE `project_user_assignment` (
+	`project_id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	`user_id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	`create_time` DATETIME,
+	`create_user_id` INTEGER,
+	`update_time` DATETIME,
+	`update_user_id` INTEGER
+) ENGINE = InnoDB' in C:\wamp\www\bugtracker\framework\db\CDbCommand.php:354
+Stack trace:
+#0 C:\wamp\www\bugtracker\framework\db\CDbCommand.php(1251): CDbCommand->execute()
+#1 C:\wamp\www\bugtracker\framework\db\CDbMigration.php(229): CDbCommand->createTable('project_user_as...', Array, 'ENGINE = InnoDB')
+#2 C:\wamp\www\bugtracker\bug_app\protected\migrations\m121010_063240_create_table_project_user_assignment.php(14): CDbMigration->createTable('project_user_as...', Array, 'ENGINE = InnoDB')
+#3 C:\wamp\www\bugtracker\framework\cli\commands\MigrateCommand.php(386): m121010_063240_create_table_project_user_assignment->up()
+#4 C:\wamp\www\bugtracker\framework\cli\commands\MigrateCommand.php(110): MigrateCommand->migrateUp('m121010_063240_...')
+#5 [internal function]: MigrateCommand->actionUp(Array)
+#6 C:\wamp\www\bugtracker\framework\console\CConsoleCommand.php(173): ReflectionMethod->invokeArgs(Object(MigrateCommand), Array)
+#7 C:\wamp\www\bugtracker\framework\console\CConsoleCommandRunner.php(68): CConsoleCommand->run(Array)
+#8 C:\wamp\www\bugtracker\framework\console\CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#9 C:\wamp\www\bugtracker\framework\base\CApplication.php(162): CConsoleApplication->processRequest()
+#10 C:\wamp\www\bugtracker\framework\yiic.php(34): CApplication->run()
+#11 C:\wamp\www\bugtracker\bug_app\protected\yiic.php(7): require_once('C:\wamp\www\bug...')
+#12 C:\wamp\www\bugtracker\bug_app\protected\yiic(4): require_once('C:\wamp\www\bug...')
+#13 {main}
+---
+2012/10/10 07:05:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "form".' in C:\wamp\www\bugtracker\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\bugtracker\framework\web\CController.php(271): CController->missingAction('form')
+#1 C:\wamp\www\bugtracker\framework\web\CWebApplication.php(283): CController->run('form')
+#2 C:\wamp\www\bugtracker\framework\web\CWebApplication.php(142): CWebApplication->runController('user/form')
+#3 C:\wamp\www\bugtracker\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\bugtracker\bug_app\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php?r=user/form
+---
+2012/10/10 07:06:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "form".' in C:\wamp\www\bugtracker\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\bugtracker\framework\web\CController.php(271): CController->missingAction('form')
+#1 C:\wamp\www\bugtracker\framework\web\CWebApplication.php(283): CController->run('form')
+#2 C:\wamp\www\bugtracker\framework\web\CWebApplication.php(142): CWebApplication->runController('user/form')
+#3 C:\wamp\www\bugtracker\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\bugtracker\bug_app\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php?r=user/form
+---
+2012/10/10 07:06:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "form".' in C:\wamp\www\bugtracker\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\bugtracker\framework\web\CController.php(271): CController->missingAction('form')
+#1 C:\wamp\www\bugtracker\framework\web\CWebApplication.php(283): CController->run('form')
+#2 C:\wamp\www\bugtracker\framework\web\CWebApplication.php(142): CWebApplication->runController('user/form')
+#3 C:\wamp\www\bugtracker\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\bugtracker\bug_app\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php?r=user/form
+---
+2012/10/10 07:06:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "create".' in C:\wamp\www\bugtracker\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\bugtracker\framework\web\CController.php(271): CController->missingAction('create')
+#1 C:\wamp\www\bugtracker\framework\web\CWebApplication.php(283): CController->run('create')
+#2 C:\wamp\www\bugtracker\framework\web\CWebApplication.php(142): CWebApplication->runController('user/create')
+#3 C:\wamp\www\bugtracker\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\bugtracker\bug_app\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php?r=user/create
+---
+2012/10/10 07:06:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "create".' in C:\wamp\www\bugtracker\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\bugtracker\framework\web\CController.php(271): CController->missingAction('create')
+#1 C:\wamp\www\bugtracker\framework\web\CWebApplication.php(283): CController->run('create')
+#2 C:\wamp\www\bugtracker\framework\web\CWebApplication.php(142): CWebApplication->runController('user/create')
+#3 C:\wamp\www\bugtracker\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\bugtracker\bug_app\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php?r=user/create
+---
+2012/10/10 07:17:10 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\wamp\www\bugtracker\framework\web\auth\CAccessControlFilter.php:170
+Stack trace:
+#0 C:\wamp\www\bugtracker\framework\web\auth\CAccessControlFilter.php(133): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\wamp\www\bugtracker\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\bugtracker\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\bugtracker\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\bugtracker\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\bugtracker\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\wamp\www\bugtracker\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\bugtracker\framework\web\CWebApplication.php(283): CController->run('admin')
+#8 C:\wamp\www\bugtracker\framework\web\CWebApplication.php(142): CWebApplication->runController('user/admin')
+#9 C:\wamp\www\bugtracker\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\wamp\www\bugtracker\bug_app\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/index.php?r=user/admin
+HTTP_REFERER=http://localhost/index.php?r=user/index
 ---

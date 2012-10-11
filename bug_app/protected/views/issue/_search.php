@@ -17,18 +17,58 @@
 	</div>
 
 	<div class="row">
+		<?php echo $form->label($model,'name'); ?>
+		<?php echo $form->textField($model,'name',array('size'=>60,'maxlength'=>256)); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'description'); ?>
+		<?php echo $form->textField($model,'description',array('size'=>60,'maxlength'=>2000)); ?>
+	</div>
+
+	<div class="row">
 		<?php echo $form->label($model,'project_id'); ?>
 		<?php echo $form->textField($model,'project_id'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'name'); ?>
-		<?php echo $form->textField($model,'name',array('size'=>60,'maxlength'=>255)); ?>
+		<?php echo $form->label($model,'type_id'); ?>
+		<?php echo $form->textField($model,'type_id'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'detail'); ?>
-		<?php echo $form->textArea($model,'detail',array('rows'=>6, 'cols'=>50)); ?>
+		<?php echo $form->label($model,'status_id'); ?>
+		<?php echo $form->textField($model,'status_id'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'owner_id'); ?>
+		<?php echo $form->textField($model,'owner_id'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'requester_id'); ?>
+		<?php echo $form->textField($model,'requester_id'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'create_time'); ?>
+		<?php echo $form->textField($model,'create_time'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'create_user_id'); ?>
+		<?php echo $form->textField($model,'create_user_id'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'update_time'); ?>
+		<?php echo $form->textField($model,'update_time'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'update_user_id'); ?>
+		<?php echo $form->textField($model,'update_user_id'); ?>
 	</div>
 
 	<div class="row buttons">
