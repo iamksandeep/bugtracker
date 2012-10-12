@@ -16,7 +16,7 @@
 	<?php echo $form->errorSummary($model); ?>
 
 	<div class="row">
-<<<<<<< HEAD
+
 		<?php echo $form->labelEx($model,'email'); ?>
 		<?php echo $form->textField($model,'email',array('size'=>60,'maxlength'=>256)); ?>
 		<?php echo $form->error($model,'email'); ?>
@@ -62,7 +62,7 @@
 		<?php echo $form->labelEx($model,'update_user_id'); ?>
 		<?php echo $form->textField($model,'update_user_id'); ?>
 		<?php echo $form->error($model,'update_user_id'); ?>
-=======
+
 		<?php echo $form->labelEx($model,'name_first'); ?>
 		<?php echo $form->textField($model,'name_first',array('size'=>60,'maxlength'=>255)); ?>
 		<?php echo $form->error($model,'name_first'); ?>
@@ -84,7 +84,7 @@
 		<?php echo $form->labelEx($model,'password'); ?>
 		<?php echo $form->passwordField($model,'password',array('size'=>60,'maxlength'=>255)); ?>
 		<?php echo $form->error($model,'password'); ?>
->>>>>>> e005f821fda43890f75555234ba1689edafd2c3c
+
 	</div>
 
 	<div class="row buttons">

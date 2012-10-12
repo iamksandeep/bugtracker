@@ -4,16 +4,6 @@
 /* @var $form CActiveForm */
 ?>
 
-<<<<<<< HEAD
-<?php
-//For Drop down 
- $form=$this->beginWidget('CActiveForm', array(
-'id'=>'issue-form',
-'enableAjaxValidation'=>false,
-)); ?>
-
-=======
->>>>>>> e005f821fda43890f75555234ba1689edafd2c3c
 <div class="form">
 
 <?php $form=$this->beginWidget('CActiveForm', array(
@@ -26,7 +16,7 @@
 	<?php echo $form->errorSummary($model); ?>
 
 	<div class="row">
-<<<<<<< HEAD
+
 		<?php echo $form->labelEx($model,'name'); ?>
 		<?php echo $form->textField($model,'name',array('size'=>60,'maxlength'=>256)); ?>
 		<?php echo $form->error($model,'name'); ?>
@@ -39,15 +29,14 @@
 	</div>
 
 	<div class="row">
-=======
->>>>>>> e005f821fda43890f75555234ba1689edafd2c3c
+
 		<?php echo $form->labelEx($model,'project_id'); ?>
 		<?php echo $form->textField($model,'project_id'); ?>
 		<?php echo $form->error($model,'project_id'); ?>
 	</div>
 
 	<div class="row">
-<<<<<<< HEAD
+
 		<?php echo $form->labelEx($model,'type_id'); ?>
 		<?php echo $form->textField($model,'type_id'); ?>
 		<?php echo $form->error($model,'type_id'); ?>
@@ -93,18 +82,13 @@
 		<?php echo $form->labelEx($model,'update_user_id'); ?>
 		<?php echo $form->textField($model,'update_user_id'); ?>
 		<?php echo $form->error($model,'update_user_id'); ?>
-=======
+
 		<?php echo $form->labelEx($model,'name'); ?>
 		<?php echo $form->textField($model,'name',array('size'=>60,'maxlength'=>255)); ?>
 		<?php echo $form->error($model,'name'); ?>
 	</div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'detail'); ?>
-		<?php echo $form->textArea($model,'detail',array('rows'=>6, 'cols'=>50)); ?>
-		<?php echo $form->error($model,'detail'); ?>
->>>>>>> e005f821fda43890f75555234ba1689edafd2c3c
-	</div>
+	
 
 	<div class="row buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
