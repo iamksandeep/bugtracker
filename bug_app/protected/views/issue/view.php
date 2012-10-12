@@ -22,6 +22,7 @@ $this->menu=array(
 	'data'=>$model,
 	'attributes'=>array(
 		'id',
+<<<<<<< HEAD
 		'name',
 		'description',
 		'project_id',
@@ -33,5 +34,10 @@ $this->menu=array(
 		'create_user_id',
 		'update_time',
 		'update_user_id',
+=======
+		'project_id',
+		'name',
+		'detail',
+>>>>>>> e005f821fda43890f75555234ba1689edafd2c3c
 	),
 )); ?>

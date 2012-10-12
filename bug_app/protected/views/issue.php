@@ -16,18 +16,22 @@
 	<?php echo $form->errorSummary($model); ?>
 
 	<div class="row">
+<<<<<<< HEAD
 		<?php echo $form->labelEx($model,'name'); ?>
 		<?php echo $form->textField($model,'name'); ?>
 		<?php echo $form->error($model,'name'); ?>
 	</div>
 
 	<div class="row">
+=======
+>>>>>>> e005f821fda43890f75555234ba1689edafd2c3c
 		<?php echo $form->labelEx($model,'project_id'); ?>
 		<?php echo $form->textField($model,'project_id'); ?>
 		<?php echo $form->error($model,'project_id'); ?>
 	</div>
 
 	<div class="row">
+<<<<<<< HEAD
 		<?php echo $form->labelEx($model,'type_id'); ?>
 		<?php echo $form->textField($model,'type_id'); ?>
 		<?php echo $form->error($model,'type_id'); ?>
@@ -79,6 +83,17 @@
 		<?php echo $form->labelEx($model,'update_time'); ?>
 		<?php echo $form->textField($model,'update_time'); ?>
 		<?php echo $form->error($model,'update_time'); ?>
+=======
+		<?php echo $form->labelEx($model,'name'); ?>
+		<?php echo $form->textField($model,'name'); ?>
+		<?php echo $form->error($model,'name'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'detail'); ?>
+		<?php echo $form->textField($model,'detail'); ?>
+		<?php echo $form->error($model,'detail'); ?>
+>>>>>>> e005f821fda43890f75555234ba1689edafd2c3c
 	</div>
 
 

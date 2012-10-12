@@ -17,6 +17,7 @@
 	</div>
 
 	<div class="row">
+<<<<<<< HEAD
 		<?php echo $form->label($model,'name'); ?>
 		<?php echo $form->textField($model,'name',array('size'=>60,'maxlength'=>256)); ?>
 	</div>
@@ -27,11 +28,14 @@
 	</div>
 
 	<div class="row">
+=======
+>>>>>>> e005f821fda43890f75555234ba1689edafd2c3c
 		<?php echo $form->label($model,'project_id'); ?>
 		<?php echo $form->textField($model,'project_id'); ?>
 	</div>
 
 	<div class="row">
+<<<<<<< HEAD
 		<?php echo $form->label($model,'type_id'); ?>
 		<?php echo $form->textField($model,'type_id'); ?>
 	</div>
@@ -69,6 +73,15 @@
 	<div class="row">
 		<?php echo $form->label($model,'update_user_id'); ?>
 		<?php echo $form->textField($model,'update_user_id'); ?>
+=======
+		<?php echo $form->label($model,'name'); ?>
+		<?php echo $form->textField($model,'name',array('size'=>60,'maxlength'=>255)); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'detail'); ?>
+		<?php echo $form->textArea($model,'detail',array('rows'=>6, 'cols'=>50)); ?>
+>>>>>>> e005f821fda43890f75555234ba1689edafd2c3c
 	</div>
 
 	<div class="row buttons">

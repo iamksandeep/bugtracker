@@ -17,6 +17,7 @@
 	</div>
 
 	<div class="row">
+<<<<<<< HEAD
 		<?php echo $form->label($model,'email'); ?>
 		<?php echo $form->textField($model,'email',array('size'=>60,'maxlength'=>256)); ?>
 	</div>
@@ -49,6 +50,20 @@
 	<div class="row">
 		<?php echo $form->label($model,'update_user_id'); ?>
 		<?php echo $form->textField($model,'update_user_id'); ?>
+=======
+		<?php echo $form->label($model,'name_first'); ?>
+		<?php echo $form->textField($model,'name_first',array('size'=>60,'maxlength'=>255)); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'name_last'); ?>
+		<?php echo $form->textField($model,'name_last',array('size'=>60,'maxlength'=>255)); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'email'); ?>
+		<?php echo $form->textField($model,'email',array('size'=>60,'maxlength'=>255)); ?>
+>>>>>>> e005f821fda43890f75555234ba1689edafd2c3c
 	</div>
 
 	<div class="row buttons">

@@ -46,6 +46,7 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 	'filter'=>$model,
 	'columns'=>array(
 		'id',
+<<<<<<< HEAD
 		'email',
 		'username',
 		'password',
@@ -56,6 +57,12 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 		'update_time',
 		'update_user_id',
 		*/
+=======
+		'name_first',
+		'name_last',
+		'email',
+		'password',
+>>>>>>> e005f821fda43890f75555234ba1689edafd2c3c
 		array(
 			'class'=>'CButtonColumn',
 		),

@@ -9,6 +9,7 @@
 	<?php echo CHtml::link(CHtml::encode($data->id), array('view', 'id'=>$data->id)); ?>
 	<br />
 
+<<<<<<< HEAD
 	<b><?php echo CHtml::encode($data->getAttributeLabel('email')); ?>:</b>
 	<?php echo CHtml::encode($data->email); ?>
 	<br />
@@ -43,5 +44,23 @@
 	<br />
 
 	*/ ?>
+=======
+	<b><?php echo CHtml::encode($data->getAttributeLabel('name_first')); ?>:</b>
+	<?php echo CHtml::encode($data->name_first); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('name_last')); ?>:</b>
+	<?php echo CHtml::encode($data->name_last); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('email')); ?>:</b>
+	<?php echo CHtml::encode($data->email); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('password')); ?>:</b>
+	<?php echo CHtml::encode($data->password); ?>
+	<br />
+
+>>>>>>> e005f821fda43890f75555234ba1689edafd2c3c
 
 </div>

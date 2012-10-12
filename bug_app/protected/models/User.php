@@ -5,6 +5,7 @@
  *
  * The followings are the available columns in table 'user':
  * @property integer $id
+<<<<<<< HEAD
  * @property string $email
  * @property string $username
  * @property string $password
@@ -13,6 +14,12 @@
  * @property integer $create_user_id
  * @property string $update_time
  * @property integer $update_user_id
+=======
+ * @property string $name_first
+ * @property string $name_last
+ * @property string $email
+ * @property string $password
+>>>>>>> e005f821fda43890f75555234ba1689edafd2c3c
  */
 class User extends CActiveRecord
 {
@@ -42,6 +49,7 @@ class User extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
+<<<<<<< HEAD
 			array('email', 'required'),
 			array('create_user_id, update_user_id', 'numerical', 'integerOnly'=>true),
 			array('email, username, password', 'length', 'max'=>256),
@@ -49,6 +57,13 @@ class User extends CActiveRecord
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
 			array('id, email, username, password, last_login_time, create_time, create_user_id, update_time, update_user_id', 'safe', 'on'=>'search'),
+=======
+			array('name_first, name_last, email, password', 'required'),
+			array('name_first, name_last, email, password', 'length', 'max'=>255),
+			// The following rule is used by search().
+			// Please remove those attributes that should not be searched.
+			array('id, name_first, name_last, email, password', 'safe', 'on'=>'search'),
+>>>>>>> e005f821fda43890f75555234ba1689edafd2c3c
 		);
 	}
 
@@ -70,6 +85,7 @@ class User extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
+<<<<<<< HEAD
 			'email' => 'Email',
 			'username' => 'Username',
 			'password' => 'Password',
@@ -78,6 +94,12 @@ class User extends CActiveRecord
 			'create_user_id' => 'Create User',
 			'update_time' => 'Update Time',
 			'update_user_id' => 'Update User',
+=======
+			'name_first' => 'Name First',
+			'name_last' => 'Name Last',
+			'email' => 'Email',
+			'password' => 'Password',
+>>>>>>> e005f821fda43890f75555234ba1689edafd2c3c
 		);
 	}
 
@@ -93,6 +115,7 @@ class User extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('id',$this->id);
+<<<<<<< HEAD
 		$criteria->compare('email',$this->email,true);
 		$criteria->compare('username',$this->username,true);
 		$criteria->compare('password',$this->password,true);
@@ -101,6 +124,12 @@ class User extends CActiveRecord
 		$criteria->compare('create_user_id',$this->create_user_id);
 		$criteria->compare('update_time',$this->update_time,true);
 		$criteria->compare('update_user_id',$this->update_user_id);
+=======
+		$criteria->compare('name_first',$this->name_first,true);
+		$criteria->compare('name_last',$this->name_last,true);
+		$criteria->compare('email',$this->email,true);
+		$criteria->compare('password',$this->password,true);
+>>>>>>> e005f821fda43890f75555234ba1689edafd2c3c
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

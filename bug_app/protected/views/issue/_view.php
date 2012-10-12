@@ -9,6 +9,7 @@
 	<?php echo CHtml::link(CHtml::encode($data->id), array('view', 'id'=>$data->id)); ?>
 	<br />
 
+<<<<<<< HEAD
 	<b><?php echo CHtml::encode($data->getAttributeLabel('name')); ?>:</b>
 	<?php echo CHtml::encode($data->name); ?>
 	<br />
@@ -17,10 +18,13 @@
 	<?php echo CHtml::encode($data->description); ?>
 	<br />
 
+=======
+>>>>>>> e005f821fda43890f75555234ba1689edafd2c3c
 	<b><?php echo CHtml::encode($data->getAttributeLabel('project_id')); ?>:</b>
 	<?php echo CHtml::encode($data->project_id); ?>
 	<br />
 
+<<<<<<< HEAD
 	<b><?php echo CHtml::encode($data->getAttributeLabel('type_id')); ?>:</b>
 	<?php echo CHtml::encode($data->type_id); ?>
 	<br />
@@ -55,5 +59,15 @@
 	<br />
 
 	*/ ?>
+=======
+	<b><?php echo CHtml::encode($data->getAttributeLabel('name')); ?>:</b>
+	<?php echo CHtml::encode($data->name); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('detail')); ?>:</b>
+	<?php echo CHtml::encode($data->detail); ?>
+	<br />
+
+>>>>>>> e005f821fda43890f75555234ba1689edafd2c3c
 
 </div>

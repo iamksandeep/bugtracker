@@ -735,6 +735,9 @@ Stack trace:
 #13 {main}
 ---
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> e005f821fda43890f75555234ba1689edafd2c3c
 2012/10/08 08:49:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "form".' in C:\wamp\www\bugtracker\framework\web\CController.php:484
 Stack trace:
 #0 C:\wamp\www\bugtracker\framework\web\CController.php(271): CController->missingAction('form')
@@ -1339,6 +1342,7 @@ Stack trace:
 #12 C:\wamp\www\bugtracker\bug_app\protected\yiic(4): require_once('C:\wamp\www\bug...')
 #13 {main}
 ---
+<<<<<<< HEAD
 2012/10/10 04:43:21 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1217 Cannot delete or update a parent row: a foreign key constraint fails. The SQL statement executed was: DROP TABLE `project`.
 2012/10/10 04:43:21 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1217 Cannot delete or update a parent row: a foreign key constraint fails. The SQL statement executed was: DROP TABLE `project`' in C:\wamp\www\bugtracker\framework\db\CDbCommand.php:354
 Stack trace:
@@ -1753,3 +1757,5 @@ Stack trace:
 REQUEST_URI=/index.php?r=user/admin
 HTTP_REFERER=http://localhost/index.php?r=user/index
 ---
+=======
+>>>>>>> e005f821fda43890f75555234ba1689edafd2c3c
