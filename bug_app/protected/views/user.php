@@ -16,7 +16,6 @@
 	<?php echo $form->errorSummary($model); ?>
 
 	<div class="row">
-<<<<<<< HEAD
 		<?php echo $form->labelEx($model,'email'); ?>
 		<?php echo $form->textField($model,'email'); ?>
 		<?php echo $form->error($model,'email'); ?>
@@ -38,23 +37,6 @@
 		<?php echo $form->labelEx($model,'username'); ?>
 		<?php echo $form->textField($model,'username'); ?>
 		<?php echo $form->error($model,'username'); ?>
-=======
-		<?php echo $form->labelEx($model,'name_first'); ?>
-		<?php echo $form->textField($model,'name_first'); ?>
-		<?php echo $form->error($model,'name_first'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'name_last'); ?>
-		<?php echo $form->textField($model,'name_last'); ?>
-		<?php echo $form->error($model,'name_last'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'email'); ?>
-		<?php echo $form->textField($model,'email'); ?>
-		<?php echo $form->error($model,'email'); ?>
->>>>>>> e005f821fda43890f75555234ba1689edafd2c3c
 	</div>
 
 	<div class="row">
@@ -63,7 +45,6 @@
 		<?php echo $form->error($model,'password'); ?>
 	</div>
 
-<<<<<<< HEAD
 	<div class="row">
 		<?php echo $form->labelEx($model,'last_login_time'); ?>
 		<?php echo $form->textField($model,'last_login_time'); ?>
@@ -82,8 +63,6 @@
 		<?php echo $form->error($model,'update_time'); ?>
 	</div>
 
-=======
->>>>>>> e005f821fda43890f75555234ba1689edafd2c3c
 
 	<div class="row buttons">
 		<?php echo CHtml::submitButton('Submit'); ?>

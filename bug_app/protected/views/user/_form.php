@@ -16,7 +16,6 @@
 	<?php echo $form->errorSummary($model); ?>
 
 	<div class="row">
-
 		<?php echo $form->labelEx($model,'email'); ?>
 		<?php echo $form->textField($model,'email',array('size'=>60,'maxlength'=>256)); ?>
 		<?php echo $form->error($model,'email'); ?>
@@ -62,29 +61,6 @@
 		<?php echo $form->labelEx($model,'update_user_id'); ?>
 		<?php echo $form->textField($model,'update_user_id'); ?>
 		<?php echo $form->error($model,'update_user_id'); ?>
-
-		<?php echo $form->labelEx($model,'name_first'); ?>
-		<?php echo $form->textField($model,'name_first',array('size'=>60,'maxlength'=>255)); ?>
-		<?php echo $form->error($model,'name_first'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'name_last'); ?>
-		<?php echo $form->textField($model,'name_last',array('size'=>60,'maxlength'=>255)); ?>
-		<?php echo $form->error($model,'name_last'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'email'); ?>
-		<?php echo $form->textField($model,'email',array('size'=>60,'maxlength'=>255)); ?>
-		<?php echo $form->error($model,'email'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'password'); ?>
-		<?php echo $form->passwordField($model,'password',array('size'=>60,'maxlength'=>255)); ?>
-		<?php echo $form->error($model,'password'); ?>
-
 	</div>
 
 	<div class="row buttons">

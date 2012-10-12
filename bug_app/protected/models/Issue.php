@@ -19,8 +19,14 @@
  */
 class Issue extends CActiveRecord
 {
-	
-	
+	//For Type 
+	const TYPE_BUG=0;
+	const TYPE_FEATURE=1;
+	const TYPE_TASK=2;
+	// For Status
+	const TYPE_NOT_YET_STARTED=0;
+	const STARTED=1;
+	Const FINISHED=2;
 
 	/**
 	 * Returns the static model of the specified AR class.
@@ -119,5 +125,20 @@ class Issue extends CActiveRecord
 			'criteria'=>$criteria,
 		));
 	}
-		
+		public function getTypeOptions()
+		{
+		return array(
+		self::TYPE_BUG=>'Bug',
+		self::TYPE_FEATURE=>'Feature',
+		self::TYPE_TASK=>'Task',
+		);
+		}
+		public function getTypeStatus()
+		{
+		return array(
+		self::TYPE_BUG=>'Not yet started',
+		self::TYPE_FEATURE=>'Started',
+		self::TYPE_TASK=>'Finished',
+		);
+		}
 }

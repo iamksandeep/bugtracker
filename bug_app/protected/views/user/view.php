@@ -22,7 +22,6 @@ $this->menu=array(
 	'data'=>$model,
 	'attributes'=>array(
 		'id',
-<<<<<<< HEAD
 		'email',
 		'username',
 		'password',
@@ -31,11 +30,5 @@ $this->menu=array(
 		'create_user_id',
 		'update_time',
 		'update_user_id',
-=======
-		'name_first',
-		'name_last',
-		'email',
-		'password',
->>>>>>> e005f821fda43890f75555234ba1689edafd2c3c
 	),
 )); ?>
